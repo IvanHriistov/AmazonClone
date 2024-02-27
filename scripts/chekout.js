@@ -133,7 +133,7 @@ document.querySelector('.js-order-summary')
           const productId = link.dataset.productId;
 
           const container = document.querySelector(`.js-cart-item-container-${productId}`);
-          container.classList.add('is-editing-quantity');       
+          container.classList.add('is-editing-quantity'); 
         });
       });
   
