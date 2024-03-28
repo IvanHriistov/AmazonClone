@@ -158,3 +158,10 @@
 .added-to-cart-visible {
   opacity: 1;
 }
+
+.not-found-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the container takes up the full height */
+}

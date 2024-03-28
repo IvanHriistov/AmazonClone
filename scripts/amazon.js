@@ -119,8 +119,15 @@ function performSearch() {
 
    // Check if any products were found
    if (filteredProducts.length === 0) {
-    // Update the products grid with a "Product not found" message
-    document.querySelector('.js-products-grid').innerHTML = '<div class="product-not-found">Product not found</div>';
+    // Create a container for the image and apply CSS to center it
+    const noProductFoundContainer = `
+    <div class="not-found-container">
+      <img src="images/error_404.jpeg" alt="No Product Found">
+    </div>
+`;
+
+   // Update the products grid with the centered container
+   document.querySelector('.js-products-grid').innerHTML = noProductFoundContainer;
    }else {
     
   // Generate HTML for filtered products
