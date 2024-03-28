@@ -117,6 +117,12 @@ function performSearch() {
       product.name.toLowerCase().includes(searchTerm)
   );
 
+   // Check if any products were found
+   if (filteredProducts.length === 0) {
+    // Update the products grid with a "Product not found" message
+    document.querySelector('.js-products-grid').innerHTML = '<div class="product-not-found">Product not found</div>';
+   }else {
+    
   // Generate HTML for filtered products
   let filteredProductsHTML = '';
   filteredProducts.forEach(product => {
@@ -175,4 +181,5 @@ function performSearch() {
 
   // Update the products grid with filtered products
   document.querySelector('.js-products-grid').innerHTML = filteredProductsHTML;
+   }
 }
