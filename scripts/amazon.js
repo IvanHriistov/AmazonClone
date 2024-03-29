@@ -100,6 +100,16 @@ document.querySelector('.main').addEventListener('change', function(event) {
       updateCartQuantity();
   }
 });
+
+
+document.querySelector('.search-bar').addEventListener('keyup', function(event) {
+  // Check if the key pressed is Enter
+  if (event.keyCode === 13) {
+    // Trigger the search functionality
+    performSearch();
+  }
+});
+
   
 document.querySelector('.search-button').addEventListener('click', function() {
   // Trigger the search functionality when the button is clicked
