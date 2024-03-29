@@ -150,6 +150,18 @@ import {renderCheckoutHeader} from './checkoutHeader.js';
             if (newQuantity < 0 || newQuantity >= 1000) {
               alert('Quantity must be at least 0 and less than 1000');
               return;
+            } else if (isNaN(newQuantity)){
+              // If not a number, show an alert
+              alert('Please enter a valid number for quantity.');
+              return;
+            } else if (quantityInput.value === '') {
+              // If empty, show an alert
+              alert('Please enter a quantity.');
+              return;
+            } else if (newQuantity === 0) {
+              // If quantity is 0, show an alert
+              alert('Quantity cannot be 0.');
+              return;
             }
 
             updateQuantity(productId,newQuantity);
